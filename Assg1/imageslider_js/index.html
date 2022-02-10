@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image slider</title>
+</head>
+<body>
+  <!--  <h1>Image Slider</h1>
+    <img src="Naruto.png" width="300px"><br>
+    <button onclick="start()">Start</button>
+  !-->
+  <img name="slide" width="400" height="200">
+  <script>
+      var i ="0"
+      var images=[];
+      var time=3000;
+      images[0] = 'Naruto.png';
+      images[1] = 'Kakashi.png';
+      images[2] = 'rocklee.jpg';
+      images[3] = 'Sakura.png';
+      images[4] = 'Sasuke.png';
+
+      function changeImg(){
+          document.slide.src = images[i];
+          if(i < images.length-1){
+              i++;
+            
+          }
+          else{
+              i=0
+          }
+          setTimeout("changeImg()",time);
+      }
+      window.onload = changeImg;
+  </script>
+  
+</body>
+</html>
